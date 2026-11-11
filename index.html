@@ -1,0 +1,214 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C.Abdelmoudjib â€” Quest Log</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="stars"></canvas>
+
+<!-- â”€â”€ NAV â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+<nav>
+  <div class="n-logo">C<em>.Abdelmoudjib</em></div>
+  <div class="n-links">
+    <a href="#about">STATS</a>
+    <a href="#journey">MAP</a>
+    <a href="#contact">HIRE</a>
+  </div>
+  <div class="n-hp">
+    <span>HP</span>
+    <div class="hp-bar"><div class="hp-fill"></div></div>
+    <span>OPEN</span>
+  </div>
+</nav>
+
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+     HERO
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+<section id="hero">
+  <div class="hero-screen px-box px-corner rev">
+
+    <div class="h-tag">&#9654; PLAYER PROFILE LOADED</div>
+
+    <div class="hero-inner">
+
+      <!-- â”€â”€ KNIGHT â”€â”€ -->
+      <div class="knight-wrap">
+        <img src="avatar.svg" height="300"
+             style="display:block;width:auto;filter:drop-shadow(0 0 24px rgba(201,168,76,.4));"
+             alt="Knight">
+      </div>
+
+      <!-- â”€â”€ HERO TEXT â”€â”€ -->
+      <div class="hero-text">
+        <div class="h-tag" style="margin-bottom:12px;text-align:left;">&#11088; PLAYER ONE &#11088;</div>
+        <h1 class="hero-name" id="hero-name"></h1>
+        <div class="hero-cls" id="hero-cls"></div>
+        <div class="hero-stats" id="hero-stats"></div>
+        <p class="hero-desc" id="hero-desc"></p>
+        <div class="h-btns">
+          <a href="#journey" class="btn btn-g">&#9654; VIEW MAP</a>
+          <a href="#contact" class="btn btn-o">HIRE ME</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-cue">&#9660; SCROLL TO EXPLORE &#9660;</div>
+  </div>
+</section>
+
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+     CHARACTER SHEET
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+<div class="ch-div rev">
+  <div class="ch-line"></div>
+  <div class="ch-txt">&#9654; CHAPTER I &nbsp;&#9472;&nbsp; CHARACTER STATS</div>
+  <div class="ch-line"></div>
+</div>
+
+<section id="about">
+  <div class="sec-hdr rev">
+    <span class="sec-tag">&#9472;&#9472; CHARACTER SHEET &#9472;&#9472;</span>
+    <h2 class="sec-title">STAT OVERVIEW</h2>
+  </div>
+  <div class="csheet">
+    <div class="sp px-box px-corner rev">
+      <div class="sp-title">&#9658; SKILL TREE</div>
+      <div id="skills-list"></div>
+    </div>
+    <div class="sp px-box px-corner rev rev-d1">
+      <div class="sp-title">&#9658; PLAYER INFO</div>
+      <div id="info-list"></div>
+      <div class="ability-box">
+        <div class="ability-label">SPECIAL ABILITY</div>
+        <div class="ability-text" id="ability-text"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+     MAP JOURNEY
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+<div class="ch-div rev">
+  <div class="ch-line"></div>
+  <div class="ch-txt">&#9654; CHAPTER II &nbsp;&#9472;&nbsp; THE QUEST MAP</div>
+  <div class="ch-line"></div>
+</div>
+
+<section id="journey">
+  <div class="sec-hdr rev">
+    <span class="sec-tag">&#9472;&#9472; WORLD MAP &#9472;&#9472;</span>
+    <h2 class="sec-title">COMPLETED QUESTS</h2>
+  </div>
+
+  <div class="map-wrap" id="mapWrap">
+
+    <canvas id="map-canvas"></canvas>
+
+    <!-- SVG: curved path + castle + lake markers -->
+    <svg class="map-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <defs>
+        <filter id="path-glow">
+          <feGaussianBlur stdDeviation="1.2" result="blur"/>
+          <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+      </defs>
+
+      <!-- Path glow -->
+      <path d="M 50 3
+               C 50 6.5,  73 6.5,  73 10
+               C 73 16,   27 16,   27 22
+               C 27 28,   74 28,   74 34
+               C 74 40,   26 40,   26 46
+               C 26 52,   73 52,   73 58
+               C 73 64,   27 64,   27 70
+               C 27 75,   50 75,   50 80"
+        fill="none" stroke="rgba(201,168,76,.12)" stroke-width="4"
+        stroke-linecap="round" filter="url(#path-glow)"/>
+
+      <!-- Path dots -->
+      <path id="mapPathDots"
+            d="M 50 3
+               C 50 6.5,  73 6.5,  73 10
+               C 73 16,   27 16,   27 22
+               C 27 28,   74 28,   74 34
+               C 74 40,   26 40,   26 46
+               C 26 52,   73 52,   73 58
+               C 73 64,   27 64,   27 70
+               C 27 75,   50 75,   50 80"
+        fill="none" stroke="#c9a84c" stroke-width="0.9"
+        stroke-dasharray="0.01 2.6" stroke-linecap="round" opacity=".7"/>
+
+      <!-- START label -->
+      <text x="50" y="2" text-anchor="middle"
+            font-family="'Press Start 2P'" font-size="1.8"
+            fill="#2ecc71" opacity=".8">START</text>
+
+      <!-- GUILD HALL label -->
+      <text x="50" y="82.5" text-anchor="middle"
+            font-family="'Press Start 2P'" font-size="1.8"
+            fill="#9b59b6" opacity=".8">GUILD HALL</text>
+
+    </svg>
+
+    <!-- Quest nodes injected by main.js -->
+
+  </div><!-- /map-wrap -->
+</section>
+
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+     QUEST POPUP
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+<div id="q-popup">
+  <div class="popup-inner px-box">
+    <button class="popup-close" id="popupClose">&#10005;</button>
+    <div  class="popup-tag"    id="p-tag"></div>
+    <h3   class="popup-title"  id="p-title"></h3>
+    <div  class="popup-badges" id="p-badges"></div>
+    <div  class="popup-stars"  id="p-stars"></div>
+    <p    class="popup-desc"   id="p-desc"></p>
+    <div class="popup-foot">
+      <span class="popup-url" id="p-url"></span>
+      <a class="btn btn-g" id="p-link">&#9654; OPEN QUEST</a>
+    </div>
+  </div>
+</div>
+
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+     FIXED KNIGHT (scroll-tracked, always vertically centred)
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+<div id="mapKnight">
+  <img src="avatar.svg" width="68" style="display:block;" alt="">
+</div>
+
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+     CONTACT
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+<section id="contact">
+  <div class="cbox px-box px-corner rev">
+    <div class="c-tag">&#9654; START NEW QUEST</div>
+    <h2 class="c-title">READY TO BUILD<br>SOMETHING EPIC?</h2>
+    <p class="c-desc">Your project is the next quest on the board.<br>Let's build something fast, clean, and production-ready.</p>
+    <div class="c-links">
+      <a id="contact-email" class="btn btn-g">&#9993; SEND MESSAGE</a>
+      <a id="contact-linkedin" class="btn btn-g" href="https://www.linkedin.com/in/abdelmoudjib-chihoub-7597262a4/" target="_blank">&#128172; LINKEDIN</a>
+      <a id="contact-wa"    class="btn btn-o" href="https://wa.me/33759189725" target="_blank">&#128172; WHATSAPP</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>C.Abdelmoudjib</span> &nbsp;&#9472;&nbsp; Software Engineer &nbsp;&#9472;&nbsp;
+  <span>&#9733;</span> ALL QUESTS COMPLETED <span>&#9733;</span>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

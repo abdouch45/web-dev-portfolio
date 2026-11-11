@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" fill="#07071a"/>
+  <!-- Red plume -->
+  <rect x="13" y="0"  width="6"  height="4"  fill="#dd2222"/>
+  <rect x="11" y="3"  width="10" height="4"  fill="#cc1111"/>
+  <!-- Helmet dome -->
+  <rect x="6"  y="6"  width="20" height="4"  fill="#8aaabe"/>
+  <rect x="4"  y="9"  width="24" height="6"  fill="#9ab8cc"/>
+  <rect x="4"  y="9"  width="4"  height="4"  fill="#bcd4e4"/>
+  <!-- Visor -->
+  <rect x="4"  y="15" width="24" height="5"  fill="#2a3d4a"/>
+  <!-- Eye slits -->
+  <rect x="6"  y="16" width="6"  height="2"  fill="#506878"/>
+  <rect x="20" y="16" width="6"  height="2"  fill="#506878"/>
+  <!-- Cheek guards -->
+  <rect x="2"  y="12" width="4"  height="10" fill="#8aaabe"/>
+  <rect x="26" y="12" width="4"  height="10" fill="#8aaabe"/>
+  <!-- Helmet bottom -->
+  <rect x="4"  y="20" width="24" height="4"  fill="#9ab8cc"/>
+  <!-- Gold collar trim -->
+  <rect x="6"  y="24" width="20" height="3"  fill="#c9a84c"/>
+  <!-- Red cape sides -->
+  <rect x="0"  y="13" width="3"  height="19" fill="#cc1111"/>
+  <rect x="29" y="13" width="3"  height="19" fill="#cc1111"/>
+  <!-- Shoulder armor -->
+  <rect x="8"  y="27" width="16" height="5"  fill="#9ab8cc"/>
+</svg>
