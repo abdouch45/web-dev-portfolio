@@ -1,7 +1,7 @@
-# M2 Cyberus — Developer Portfolio
+# Developer Portfolio
 
 A pixel RPG-themed web developer portfolio built with pure HTML, CSS, and JavaScript. No frameworks, no build step, just craft.
-
+check it at this link https://abdelmoudjib-journey.duckdns.org/ 
 ## Concept
 
 The portfolio is designed as a top-down RPG world. A knight character traverses a hand-drawn canvas map as the user scrolls, stopping at quest nodes — each representing a real project. Clicking a node opens a character-sheet-style project panel.
