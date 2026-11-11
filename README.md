@@ -50,8 +50,6 @@ webdev/
 │   ├── main.js
 │   ├── style.css
 │   └── avatar.svg
-├── portfolio 1/         # Client work — not published
-└── portfolio 2/         # Client work — not published
 ```
 
 ## Author
